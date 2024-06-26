@@ -1,0 +1,253 @@
+
+
+.montserrat-1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --grey-color: #808080;
+    --dark-background-color: #000000;
+    --light-background-color:#ffffff; 
+    --accent-color: #1D24CA;
+    --primary-color:#000000;
+    --secondary-color: #808080;
+
+    --sidebar-width: 240px;
+}
+
+body{
+    background-color: var(--light-background-color);
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--primary-color);
+}
+
+p{
+    color: var(--secondary-color);
+}
+
+/* CLASSES */ 
+
+.primary-button {
+    height: 45px;
+    width: 150px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    color: var(--white-color);
+    transition: 0.5s ease-in-out;
+    background-color: var(--accent-color);
+}
+
+.primary-button:hover{
+    color: var(--accent-color);
+    background-color: transparent;
+    transform: scale(1.2);
+    border: 1px solid var(--accent-color);
+}
+
+.secondary-button {
+    height: 45px;
+    width: 150px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    color: var(--accent-color);
+    transition: 0.5s ease-in-out;
+    background-color: var(--white-color);
+    border: 1px solid var(--accent-color);
+}
+
+.secondary-button:hover{
+    color: var(--black-color);
+    background-color: transparent;
+    transform: scale(1.2);
+    border: 3px solid var(--black-color);
+}
+
+.full-height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.brand-text{
+    color: var(--accent-color);    
+}
+
+/* CABECALHO */
+.navbar {
+    background-color: var(--dark-background-color);
+}
+
+.navbar-brand img{
+    border: 10px solid var(--accent-color);
+}
+
+.navbar .nav-link{
+    color: var(--white-color);
+}
+
+.navbar .nav-link:hover{
+    color: var(--accent-color);
+}
+
+@media (min-width: 992px) {
+
+    .navbar{
+        min-height: 100vh;
+        width: var(--sidebar-width);
+    }
+
+    #content-wrapper{
+        padding-left: var(--sidebar-width);
+    }
+}
+
+/* serviços*/
+
+.service-card{
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid var(--accent-color);
+}
+
+.service-icon{
+    height: 75px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+}
+
+.service-icon img{
+    height: 50px;
+}
+
+.service-icon:hover{
+    opacity: 80%;
+}
+
+/*Sessão de resumo pessoal */ 
+
+.resume-box{
+    position: relative;
+}
+
+.resume-box::before{
+    content: '';
+    height: 100%;
+    width: 1px;
+    background-color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.resume-box::after{
+    content: '';
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: var(--accent-color) ;
+    position: absolute;
+    left: -7px;
+    top: 0;
+}
+
+/* Contato pessoal */
+
+.custom-input{
+    height: 50px ;
+}
+
+.custom-input,
+.custom-textarea,
+.form-control:focus,
+.form-control::placeholder {
+    color: var(--black-color) !important;
+}
+
+/* FAQ */
+
+.accordion-item {
+    border: none;
+    margin-block: 10px;
+    background: transparent;
+    color: var(--secondary-color) !important;
+}
+
+.accordion-button{
+    color: var(--primary-color) !important;
+    border-bottom: 1px solid var(--black-color)!important ;
+}
+
+.accordion-button::focus {
+    box-shadow: none !important;
+    border-bottom: 1px solid var(--black-color) !important;
+}
+
+.accordion-button:not(.collapsed){
+    box-shadow: none !important;
+    color: var(--primary-color) !important;
+    background-color: rgba(108,14, 255, 0.3) !important ;
+}
+
+/* footer */
+
+.footer-text{
+    border-top: 1px solid var(--secondary-color);
+}
+
+/* Botão pra voltar pro topo*/
+
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    background-color: var(--grey-color);
+}
+
+.back-to-top a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.back-to-top i {
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 550;
+    transition: 0.5s ease-in-out;
+    color: var(--white-color);
+}
