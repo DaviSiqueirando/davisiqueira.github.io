@@ -22,11 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
 //ScrollReveal
 
 const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
+    origin: 'left',
+    distance: '100px',
     duration: 1000,
     delay: 300,
     reset: true
-})
+});
 
+
+sr.reveal('.s1', { interval: 200 });
 sr.reveal(`.home-container, .service-container, .resume-container, .portfolio-container, .contact-container, .faq-container, .footer-container`)
