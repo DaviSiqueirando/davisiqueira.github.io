@@ -46,7 +46,9 @@ a:link {
 }
 
 
-
+@media #{$mq-large} {
+    
+  }
 
 .bubbles span{
     position: relative;
@@ -54,7 +56,7 @@ a:link {
     width:30px;
     height:30px;
     background: gray;
-    margin: 0 4px;
+    margin: 0 8px;
     border-radius: 50%;
     box-shadow: 0 0 0 5px #525252,
     0 0 0 5px #5a5a5a,
