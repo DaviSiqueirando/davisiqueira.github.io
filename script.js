@@ -1,5 +1,5 @@
 // Filtrar atividades portifólio
-
+'use strict';
 document.addEventListener('DOMContentLoaded', function () {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -18,6 +18,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+const switcher = document.querySelector('.btntheme');
+
+switcher.addEventListener('click', function() {
+    document.body.classList.toggle('light-theme');
+    document.body.classList.toggle('dark-theme');
+
+    console.log('current class name: ' + className);
+});
+
 
 //ScrollReveal
 

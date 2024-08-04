@@ -35,7 +35,6 @@ a:link {
 
 
 .container1{
-    
     z-index: -100;
     overflow: hidden;
     width: 100%;
@@ -59,6 +58,7 @@ a:link {
     animation: animate 10s linear infinite;
     animation-duration: calc(200s / var(--i));
 }
+
 .bubbles span:nth-child(even){
     border-radius: 30%;
     background: #4391ff;
@@ -76,27 +76,28 @@ a:link {
 :root{
     --white-color: #ffffff;
     --black-color: #000000;
+    --dark-color: #141414;
     --grey-color: #808080;
     --dark-background-color: #000000;
     --light-background-color:#ffffff; 
     --accent-color: #0c3dff;
     --primary-color:#000000;
     --secondary-color: #808080;
-
+    --navcolor: #000000;
+    --navtext: #ffffff;
+    --formtext: #000000;
     --sidebar-width: 400px;
 }
 
-body{
+body .accordion{
     background-color: var(--light-background-color);
+    transition: .5s;
 }
 
 h1, h2, h3, h4, h5, h6{
     color: var(--primary-color);
 }
 
-p{
-    color: var(--secondary-color);
-}
 
 /* CLASSES */ 
 
@@ -110,7 +111,7 @@ p{
     font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
-    color: var(--white-color);
+    color: var(--navtext);
     transition: 0.5s ease-in-out;
     background-color: var(--accent-color);
 }
@@ -131,15 +132,16 @@ p{
     border-radius: 5px;
     color: var(--accent-color);
     transition: 0.5s ease-in-out;
-    background-color: var(--white-color);
+    background-color: var(--navtext);
     border: 1px solid var(--accent-color);
+    
 }
 
 .secondary-button:hover{
-    color: var(--black-color);
+    color: var(--formtext);
     background-color: transparent;
     transform: scale(1.2);
-    border: 3px solid var(--black-color);
+    border: 3px solid var(--formtext);
 }
 
 .full-height{
@@ -160,10 +162,14 @@ p{
 
 /* CABECALHO */
 .navbar {
-    background-color: var(--dark-background-color);
+    background-color: var(--navcolor);
     font-size: 25px;
+    transition: .5s;
 }
 
+p{
+    color: var(--formtext);
+}
 .navbar-brand img{
     border: 10px solid var(--accent-color);
     box-shadow: 0px 5px 60px #0c3dff;
@@ -256,7 +262,7 @@ p{
 .custom-textarea,
 .form-control:focus,
 .form-control::placeholder {
-    color: var(--black-color) !important;
+    color: var(--formtext) !important;
 }
 
 /* FAQ */
@@ -291,7 +297,9 @@ p{
 }
 
 /* Botão pra voltar pro topo*/
-
+.contact-form{
+    color: var(--navtext);
+}
 .back-to-top{
     position: fixed;
     bottom: 20px;
@@ -304,6 +312,44 @@ p{
     border-radius: 5px;
     background-color: var(--grey-color);
 }
+
+@property --box-color {
+    syntax: "";
+    inherits: false;
+    initial-value: cornflowerblue;
+  }
+
+.btntheme{
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    z-index: 99;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    background-color: var(--grey-color);
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.light-theme {
+    background-color: var(--white);
+    color: var(--black-color);
+    transition: .5s;
+    
+  }
+  
+  .dark-theme {
+    background-color: var(--black-color);
+    --navcolor: var(--dark-color);
+    --navtext: var(--black-color);
+    --formtext: var(--white-color);
+    --accent-color: #5d4fff;
+    color: var(--white-color);
+    transition: .5s;
+  }
 
 .back-to-top a {
     color: var(--white-color);
